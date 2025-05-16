@@ -1,7 +1,8 @@
-# FULL_ADDER_SUBTRACTOR
 
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
-
+# Implementation-of-Full-Adder-and-Full-subtractor-circuit
+## NAME : YADHAV G P
+## REG NO : 212223230247
+## DATE :
 **AIM:**
 
 To design a Full Adder and Full Subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -44,12 +45,46 @@ Write the detailed procedure here
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+~~~
+module ex4(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
+
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+
+module ex44(df, bo, a, b, bin);
+    output df;
+    output bo;
+    input a;
+    input b;
+    input bin;
+	wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=(~a&b);
+	 assign w3=(~w1&bin);
+	 assign df=w1^bin;
+	 assign bo=w2|w3;
+
+endmodule
+
+~~~
 
 **RTL Schematic**
+![Screenshot 2025-04-21 135935](https://github.com/user-attachments/assets/60e19fe7-50b0-4244-aad0-7508108f093d)
+![Screenshot 2025-04-21 141316](https://github.com/user-attachments/assets/d8c89acb-d5df-4552-aa5a-3d75e0c997c6)
 
 **Output Timing Waveform**
+![Screenshot 2025-04-21 140222](https://github.com/user-attachments/assets/e16e2264-a507-4e3a-8d0f-3bcdf1cae856)
+![Screenshot 2025-04-21 141534](https://github.com/user-attachments/assets/a2c069ba-4fdb-4ae9-b67d-f91ab6fc1938)
 
 **Result:**
 
